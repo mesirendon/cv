@@ -20,7 +20,8 @@ Complete la tabla:
 
 ## Discusión
 
-1.Complete la la tabla
+<ol>
+<li>Complete la la tabla
 
 | Ilusión | Categoria | Referencia | Tipo de interactividad (si aplica) | URL código base (si aplica) |
 |---------|-----------|------------|------------------------------------|-----------------------------|
@@ -38,9 +39,12 @@ Complete la tabla:
 |Hermann Illusion|Psicológica|[The illusions index](https://www.illusionsindex.org/i/hermann-grid)|||
 |Illusory Square|Movimiento|[Geek Code](https://www.geek.com/news/10-astonishing-optical-illusion-gifs-1575117/)|||
 |Simultaneous Contrast|Psicologica|[Insider](https://www.thisisinsider.com/optical-illusion-paper-color-gradient-2018-8)|||
+</li>
 
+<li>Describa brevememente las referencias estudiadas y los posibles temas en los que le gustaría profundizar:
+</li>
+</ol>
 
-2.Describa brevememente las referencias estudiadas y los posibles temas en los que le gustaría profundizar:
 
 ## Entrega
 
