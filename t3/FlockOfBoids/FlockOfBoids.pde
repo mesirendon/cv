@@ -60,6 +60,7 @@ void setup() {
     flock.add(new Boid(new Vector(flockWidth / 2, flockHeight / 2, flockDepth / 2)));
   interpolator =  new Interpolator(scene);
   interpolaters.add(new Bezier());
+  interpolaters.add(new Hermite());
 }
 
 void draw() {
@@ -76,10 +77,10 @@ void draw() {
     strokeWeight(8);
     switch(mode) {
     case 0:
-      stroke(0, 255, 0);
+      stroke(100, 255, 100);
       break;
     case 1:
-      stroke(0, 0, 255);
+      stroke(100, 100, 255);
       break;
     }
     ArrayList<Vector> points = new ArrayList<Vector>();
@@ -217,22 +218,28 @@ void keyPressed() {
   case 'r':
     if (controlPoints == 4) controlPoints = 8;
     else controlPoints = 4;
-    println(controlPoints);
+    println("Control points: " + controlPoints);
     break;
 
   case 'f':
     vertexVertexMode = !vertexVertexMode;
+    if (vertexVertexMode) println("Vertex Vertex mode");
+    else println("Face Vertex mode");
     break;
 
   case 'm':
     immediateMode = !immediateMode;
+    if (immediateMode) println("Immediate rendering mode");
+    else println("Retained rendering mode");
     break;
 
   case '+':
     granularity *= 0.5;
+    println("Granularity: " + granularity);
     break;
   case '-':
     granularity *= 2;
+    println("Granularity: " + granularity);
     /*
     if (interpolator.keyFrames().isEmpty()) {
      println(" ¡No hay puntos para eliminar! ");
