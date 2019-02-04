@@ -61,6 +61,7 @@ void setup() {
   interpolator =  new Interpolator(scene);
   interpolaters.add(new Bezier());
   interpolaters.add(new Hermite());
+  interpolaters.add(new NaturalCubic());
 }
 
 void draw() {
@@ -81,6 +82,9 @@ void draw() {
       break;
     case 1:
       stroke(100, 100, 255);
+      break;
+    case 2:
+      stroke(255, 100, 100);
       break;
     }
     ArrayList<Vector> points = new ArrayList<Vector>();

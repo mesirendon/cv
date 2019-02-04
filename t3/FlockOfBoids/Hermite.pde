@@ -1,5 +1,5 @@
 class Hermite implements Interpolater {
-  List<Vector> points;
+  protected List<Vector> points;
 
   @Override
     public String name() {
@@ -43,18 +43,18 @@ class Hermite implements Interpolater {
   }
 
   private float h00(float t) {
-    return (1 + 2 * t) * (1 - t) * (1 - t);
+    return (1 + 2 * t) * pow((1 - t), 2);
   }
 
   private float h10(float t) {
-    return t * (1 - t) * (1 - t);
+    return t * pow((1 - t), 2);
   }
 
   private float h01(float t) {
-    return t * t * (3 - 2 * t);
+    return pow(t, 2) * (3 - 2 * t);
   }
 
   private float h11(float t) {
-    return t * t * (t - 1);
+    return pow(t, 2) * (t - 1);
   }
 }
